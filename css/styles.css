@@ -1,0 +1,87 @@
+/*
+Theme Name: makiwara.fr
+Description: used for makiwara.fr 
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Content :
+
+100 : general architecture 
+200 : Elements of headers and footers 
+300 : Contents
+999 : Generic
+
+*/
+
+@charset "UTF-8";
+
+/*----------------------------*/
+/* 100 - gneeral architecture */
+/*----------------------------*/
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-12 {width: 8.33%;}
+    .col-11{width: 16.66%;}
+    .col-10 {width: 25%;}
+    .col-9 {width: 33.33%;}
+    .col-8 {width: 41.66%;}
+    .col-7 {width: 50%;}
+    .col-6 {width: 58.33%;}
+    .col-5 {width: 66.66%;}
+    .col-4 {width: 75%;}
+    .col-3 {width: 83.33%;}
+    .col-2 {width: 91.66%;}
+    .col-1 {width: 100%;}
+}
+
+.row-1 {height : 100%;}
+.row-2 {height : 50%;}
+.row-3 {height : 33.33%;}
+.row-4 {height : 25%;}
+
+/* 
+ Generic settings
+*/
+
+* {
+	margin : 0;
+}
+
+body {
+	background-color: black;
+	color : white;
+	margin: 100px 100px 100px 100px;
+}
+
+
+#main_container {
+	display: inline-block;
+	height : 400px;
+}
+
+/* 200 - Headers & Footers */
+
+header {
+	;
+}
+
+footer {
+	text-align : center;
+}
+
+
+/*----------------------------*/
+/* 999 - generic              */
+/*----------------------------*/
+
+.no_margin {
+	margin: 0;
+	padding: 0;
+}
