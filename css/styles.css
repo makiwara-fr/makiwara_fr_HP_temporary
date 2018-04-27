@@ -25,7 +25,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500|Open+Sans:500');
 
 
-.global_margin {margin: 5%}
+.global_margin {margin: 5%; min-width:  440px;}
 
 /* For mobile phones: */
 [class*="col-"] {
@@ -34,6 +34,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 .main_orientation {flex-direction: column;}
 .second_orientation {flex-direction: row;}
+.nav_el {
+        width: 100px;
+        height: 30px;
+    }
 
 
 @media only screen and (min-width: 1024px) {
@@ -49,6 +53,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     .main_orientation {flex-direction: row;}
     .second_orientation {flex-direction: column;}
 	
+    
+    .nav_el {
+         width: 100px;
+        height: 100px;
+    }
 }
 
 
@@ -79,7 +88,7 @@ header {
 }
 
 footer {
-
+    ;
 }
 
 #main_header {
@@ -151,35 +160,55 @@ section {
 
 article {
     display:block;
-    text-align: justify;
+    text-align: center;
     margin: 0.1% 0 1% 0;
 	padding: 0 0.5%;
 
 }
 
 
-/*article>ul>li {
+article>ul>li {
+    margin: 0 35% 0 35%;
     text-align: left;
-}*/
+}
 
 /*----------------------------*/
 /* 800 - Navigation           */
 /*----------------------------*/
 
-#side_navigation aside {
-    
+#navigator {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-li.side_nav{
+
+#navigator ul {
     text-align: center;
 	display: flex;
 	flex-wrap: wrap;
-    align-items: center;  
-    justify-content: space-around;   */
-    background-color: black;
-    width: 100px;
-    height: 100px;
-    background-color: darkgray
+    align-items: flex-start; 
+    align-content: center;
+    justify-content: flex-start;   
+    margin:0;
+    padding:0;
+}
+
+#navigator li{
+    display: flex;
+
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    vertical-align: middle;
+    
+   
+
+    list-style-type: none;
+}
+
+#navigator li:hover{
+    background-color: gainsboro;
 }
 
 /*----------------------------*/
@@ -192,6 +221,17 @@ li.side_nav{
 }
 
 .middle_valign {
-    /*vertical-align: middle;*/
+    vertical-align: middle;
 }
 
+.primary{
+    background-color: black;
+}
+
+.light {
+    background-color: gainsboro;
+}
+
+.darker {
+    background-color: darkgray;
+}
