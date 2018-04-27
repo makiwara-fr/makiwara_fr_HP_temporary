@@ -25,25 +25,29 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500|Open+Sans:500');
 
 
-
+.global_margin {margin: 5%}
 
 /* For mobile phones: */
 [class*="col-"] {
 	flex: 100%;
     width: 100%;
 }
+.main_orientation {flex-direction: column;}
+.second_orientation {flex-direction: row;}
 
 
-.global_margin {margin : 10px 30px 10px 30px}
-
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
     /* For desktop: */
+    .col-4 {flex: 25%}
 	.col-3{flex: 32.33%; max-width: 341px}
-    .col-2 {flex: 49%; max-width: 512px}
-    .col-1 {flex: 99%; max-width: 1024px;}
+    .col-2 {flex: 49%; max-width: 732px; min-width: 512px;}
+    .col-1 {flex: 99%;}
 	
 	/*.global_margin {margin : 100px}*/
-	.global_margin {margin : 5%}
+	
+    
+    .main_orientation {flex-direction: row;}
+    .second_orientation {flex-direction: column;}
 	
 }
 
@@ -57,7 +61,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 body {
-	background-color: darkgrey;
+	background-color: black;
 	color : white;
 	font-family : Montserrat, sans-serif;
 }
@@ -79,43 +83,22 @@ footer {
 }
 
 #main_header {
-	display: flex;
-	flex-wrap: wrap;
-    align-items: center;  
-    align-content: center;
-    justify-content: center;
+    text-align: center;
     margin: 0;
 	background-color: black;
 }
 
 #main_footer {
 	text-align: center;
-	display: flex;
-	flex-wrap: wrap;
-    align-items: center;  /* new */
-   
-    justify-content: center;  /* new */
     background-color: black;
 }
 
 
 
 
-#main_header article {
-   /* display: flex; 
-    flex-wrap: wrap;
-    align-items: center;  
-    align-content: center;*/
-   justify-content: flex-start;  
-
-    margin: 0.1% 0 1% 0;
-	padding: 0 0.5%;
-
-}
-
 
 /*----------------------------*/
-/* 300 - Content              */
+/* 300 - general format       */
 /*----------------------------*/
 
 
@@ -152,8 +135,52 @@ a:hover {
     text-decoration: underline;
 }
 
+/*----------------------------*/
+/* 400 - Content               */
+/*----------------------------*/
+
+section {
+    display: flex; 
+    flex-wrap: wrap;
+    align-items: center;  
+    align-content: center;
+    justify-content: center;  
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    display:block;
+    text-align: justify;
+    margin: 0.1% 0 1% 0;
+	padding: 0 0.5%;
+
+}
 
 
+/*article>ul>li {
+    text-align: left;
+}*/
+
+/*----------------------------*/
+/* 800 - Navigation           */
+/*----------------------------*/
+
+#side_navigation aside {
+    
+}
+
+li.side_nav{
+    text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+    align-items: center;  
+    justify-content: space-around;   */
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    background-color: darkgray
+}
 
 /*----------------------------*/
 /* 999 - generic              */
@@ -165,6 +192,6 @@ a:hover {
 }
 
 .middle_valign {
-    vertical-align: middle;
+    /*vertical-align: middle;*/
 }
 
