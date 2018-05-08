@@ -1,6 +1,6 @@
 /*
 Theme Name: makiwara.fr
-Description: used for makiwara.fr larger device version
+Description: used for makiwara.fr mobile version
                  _    _                         
  _ __ ___   __ _| | _(_)_      ____ _ _ __ __ _ 
 | '_ ` _ \ / _` | |/ / \ \ /\ / / _` | '__/ _` |
@@ -9,6 +9,7 @@ Description: used for makiwara.fr larger device version
                                                 
 
 Version: 0.4
+
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -25,7 +26,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /* Content :
 
-100 : general architecture 
+000 : general architecture 
 200 : Elements of headers and footers 
 300 : General format
 400 : Contents
@@ -37,7 +38,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @charset "UTF-8";
 
 /*----------------------------*/
-/* 100 - general architecture */
+/* 000 - general architecture */
 /*----------------------------*/
 
 /* fonts */
@@ -45,25 +46,20 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 
-/* For desktop: */
-.col-4 {flex: 25%}
-.col-3{flex: 32.33%; max-width: 341px}
-.col-2 {flex: 49%; max-width: 512px; min-width: 400px;}
-.col-1 {flex: 99%;}
 
-
-
-/*    adaptation to larger display*/
-.global_margin {margin: 20px 130px 50px 130px;}
-.main_orientation {flex-direction: row;}
-.second_orientation {flex-direction: column;}
-.adapt_mobile{
-    visibility: visible;
+/* For mobile phones: */
+[class*="col-"] {
+	flex: 100%;
+    width: 100%;
 }
 
-
-
-
+/*Adaptation to mobile display*/
+.global_margin {margin:50px 0 50px 0;}
+.main_orientation {flex-direction: column;}
+.second_orientation {flex-direction: row;}
+.adapt_mobile{
+    visibility: hidden;
+}
 
 /*----------------------------*/
 /* 300 - general format       */
@@ -72,7 +68,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 h1 {
 	
-    font-size: 50pt;
+    font-size: 40pt;
 
 }
 
@@ -100,31 +96,18 @@ p {
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*----------------------------*/
 /* 400 - Content               */
 /*----------------------------*/
 
 section {
-      
+    
     margin: 15px;
     padding: 10px;
 }
 
 article {
-   
+    
     margin: 16px 0 16px 0;
 	padding: 0 0.5%;
 
@@ -133,15 +116,24 @@ article {
 
 article>ul>li {
     margin: 0 35% 0 35%;
-   
+
 }
 
+img {
+    width: 90%;
+}
+
+
 /*----------------------------*/
-/* 800 - navigation           */
+/* 800 - Navigation           */
 /*----------------------------*/
 
+#navigator{
+    width: 100%;
+}
 
 .nav_el {
-     width: 100px;
-    height: 100px;
-}
+        width: 25%;
+        height: 36px;
+    }
+
