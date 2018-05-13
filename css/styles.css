@@ -140,6 +140,9 @@ article>ul>li {
 /* 800 - navigation           */
 /*----------------------------*/
 
+#navigator{
+    width: auto;
+}
 
 .nav_el {
      width: 100px;
